@@ -1,0 +1,64 @@
+// Top Navigation with Sticky formatting
+.navbar {
+
+  // NEED TO FORMAT MOBILE
+  // NEED TO FORMAT MOBILE
+  .navbar-toggle {
+    display: none;
+  }
+  // NEED TO FORMAT MOBILE
+  // NEED TO FORMAT MOBILE
+
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  @include transition(all .5s ease-in);
+
+  .logo {
+    display: inline-block;
+  }
+  ul a, .navbar-toggle a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    display: inline-block;
+    padding: 3px 5px;
+    line-height: 1em;
+    &:hover {
+      color: #fff;
+      background-color: rgba(#000,.5);
+    }
+  }
+  ul {
+    float: right;
+  }
+  li {
+    padding: 0 .5em;
+    display: inline-block;
+    line-height: 50px;
+  }
+  .navbar-toggle {
+    float: right;
+  }
+
+  &.sticky {
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(#000,.2);
+    a {
+      color: #666;
+      &:hover {
+        color: #fff;
+        background-color: $main-color;
+      }
+    }
+    .logo {
+      background: url(../img/logo-color.png) no-repeat top left scroll;
+      img {
+        opacity: 0;
+      }
+    }
+  }
+}

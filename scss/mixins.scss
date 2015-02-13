@@ -1,0 +1,8 @@
+@import 'bourbon'; // http://bourbon.io/
+
+
+@mixin accent-font($color) {
+    color: $color;
+    font-weight: 600;
+    text-transform: uppercase;
+}

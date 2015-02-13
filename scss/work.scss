@@ -1,0 +1,105 @@
+/* full page video background */
+
+.home-work {
+  background: rgba($main-color,.7);
+  //padding: 0 0 10vw;
+}
+.even-three {
+  .mix {
+    width: 33.33%;
+  }
+}
+.grid-mix {
+  .mix {
+    width: 33.3%;
+    &:nth-child(1), &:nth-child(4) {
+      width: 50%;
+    }
+    &:nth-child(2), &:nth-child(3) {
+      width: 25%;
+    }
+  }
+}
+.slides {
+  //padding: 0 5vw;
+  .mix {
+    display: none; // required for mixitup sorting
+    
+    //height: 18vw;
+    overflow: hidden;
+    float: left;
+    background: #000;
+    position: relative;
+    &:hover {
+      img {
+        opacity: .3;
+        @include transform(scale(1.2));
+      }
+      .meta {
+        bottom: 20px;
+        opacity: 1;
+      }
+    }
+  }
+  a {
+    display: block;
+  }
+  img {
+    width: 100%;
+    @include transition(all .5s ease-out);
+    opacity: 1;
+    @include transform(scale(1));
+  }
+  .meta {
+    @include transition(all .5s ease-out);
+    position: absolute;
+    width: 100%;
+    bottom: -70px;
+    //bottom: 0;
+    left: 0;
+    height: 70px;
+    text-align: center;
+    color: #fff;
+    line-height: 1.4em;
+    opacity: 0;
+    strong, em, span {
+      display: block;
+    }
+    strong {
+
+    }
+    span {
+      font-size: 1.4em;
+    }
+    strong, em {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: .8em;
+      color: #b3b3b3;
+
+    }
+  }
+}
+// Work Navigation
+.work-menu {
+  max-width: $page-width;
+  margin: 0 auto;
+  padding: 2em 0;
+  color: #fff;
+  text-align: center;
+  div {
+    color: #fff;
+    font-size: .9em;
+    cursor: pointer;
+  }
+  .title {
+    @include accent-font(#fff);
+  }
+  li {
+    display: inline-block;
+    padding: 0 .5em;
+  }
+}
+
+
+
