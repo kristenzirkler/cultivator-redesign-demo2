@@ -44,6 +44,13 @@
 
   }
 }
+@media all and (max-width: 450px) {  
+  .home-intro {
+    h2 {
+      font-size: 10vw;
+    }
+  }
+}
 .home-services {
   background: #fff;
   padding: 10vw;

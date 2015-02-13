@@ -1,14 +1,6 @@
+
 // Top Navigation with Sticky formatting
 .navbar {
-
-  // NEED TO FORMAT MOBILE
-  // NEED TO FORMAT MOBILE
-  .navbar-toggle {
-    display: none;
-  }
-  // NEED TO FORMAT MOBILE
-  // NEED TO FORMAT MOBILE
-
   padding: 10px;
   position: fixed;
   top: 0;
@@ -20,7 +12,7 @@
   .logo {
     display: inline-block;
   }
-  ul a, .navbar-toggle a {
+  ul a {
     color: #fff;
     text-transform: uppercase;
     font-weight: 300;
@@ -36,12 +28,9 @@
     float: right;
   }
   li {
-    padding: 0 .5em;
+    padding: 0 .3em;
     display: inline-block;
-    line-height: 50px;
-  }
-  .navbar-toggle {
-    float: right;
+    line-height: $nav-height - 20px; // remove padding from navbar
   }
 
   &.sticky {
@@ -61,4 +50,77 @@
       }
     }
   }
+}
+
+// Mobile Nav
+.navbar-toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  width: 100px;
+  height: $nav-height;
+  text-align: center;
+  .navicon-button {
+    margin-top: 20px;
+  }
+  &.sticky {
+    color: #666;
+  }
+}
+.open {
+  background: #000;
+  //@include transition(all .5s ease-in);
+  .wrapper {
+    //transform: translateX(-100px);
+    opacity: .6;
+  }
+  .mobile-menu {
+    right: 0;
+  }
+  .navbar {
+    //left: -100px;
+  }
+}
+// Responsive 
+@media all and (max-width: 675px) { 
+  .navbar ul {
+    display: none;
+  }
+  .mobile-menu {
+    background: $main-color;
+    position: fixed;
+    top: 0; bottom: 0;
+    right: -100px;
+    width: 100px;
+    padding-top: $nav-height + 2;
+    z-index: 4;
+    li {
+      display: block;
+      text-align: center;
+      padding: 0 .3em;
+      line-height: $nav-height - 20px; // remove padding from navbar
+      border-bottom: 1px solid lighten($main-color,3);
+      &:nth-child(1) {
+        border-top: 1px solid lighten($main-color,3);
+      }
+    }
+    a {
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 300;
+      display: inline-block;
+      padding: 3px 5px;
+      line-height: 1em;
+    }
+  }
+}
+@media all and (min-width: 675px) {  
+  .navbar-toggle, .mobile-menu {
+    display: none;
+  }
+}
+
+@media all and (min-width: 800px) {
+
 }
