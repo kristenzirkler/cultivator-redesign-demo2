@@ -286,7 +286,13 @@ table {
   z-index: 3;
   -webkit-transition: all 0.5s ease-in;
   -moz-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in; }
+  transition: all 0.5s ease-in;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, transparent));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 100%); }
   .navbar .logo {
     display: inline-block; }
   .navbar ul a {
@@ -317,6 +323,8 @@ table {
       background: url(../img/logo-color.png) no-repeat top left scroll; }
       .navbar.sticky .logo img {
         opacity: 0; }
+      .navbar.sticky .logo:hover {
+        background-color: transparent; }
 
 .navbar-toggle {
   position: fixed;
