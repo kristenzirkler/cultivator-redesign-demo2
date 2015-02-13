@@ -1,0 +1,86 @@
+// Animated Icon
+// Change to watch in slow motion
+$duration: .5s;
+$icon-color : #fff;
+$icon-color-2 : #666;
+$line-size: .3125rem;
+$line-size: .2rem;
+
+.sticky {
+  .navicon {
+    background: $icon-color-2;
+    &:before, &:after {
+      background: $icon-color-2;
+    }
+  }
+  .open-button {
+    .navicon {
+      background: $icon-color;
+      &:before, &:after {
+        background: $icon-color;
+      }
+    }
+
+  }
+}
+
+.navicon-button {
+  display: inline-block;
+  position: relative;
+  padding: .8rem 0;
+  transition: $duration/2;
+  cursor: pointer;
+  user-select: none;
+
+  .navicon:before, .navicon:after {
+    transition: $duration/2;
+  }
+  span {
+    display: block;
+  }
+}
+
+.navicon {
+  position: relative;
+  width: 2em;
+  height: $line-size;
+  background: $icon-color;
+  transition: $duration;
+  border-radius: 2rem;
+
+  &:before, &:after {
+    display: block;
+    content: "";
+    height: $line-size;
+    width: 2rem;
+    background: $icon-color;
+    position: absolute;
+    z-index: -1;
+    transition: $duration $duration/2;
+    border-radius: 1rem;
+  }
+
+  &:before { top: ($line-size*2.5); }
+  &:after { top: -($line-size*2.5); }
+}
+
+.open-button:not(.steps) .navicon:before,
+.open-button:not(.steps) .navicon:after {
+  top: 0 !important;
+}
+
+.open-button .navicon:before,
+.open-button .navicon:after {
+  transition: $duration;
+}
+
+.open-button.x {
+  .navicon {
+    background: transparent;
+
+    &:before { transform: rotate(-45deg); }
+    &:after { transform: rotate(45deg); }
+  }
+}
+
+

@@ -7,14 +7,23 @@ $(function(){
 
 		if (y > t) {
 		    $('#main-navbar').addClass('sticky');
+		    $('#mobile-nav-toggle').addClass('sticky');
 		} else {
 		    $('#main-navbar').removeClass('sticky');
+		    $('#mobile-nav-toggle').removeClass('sticky');
 		}
 	}
 
 	$('#home-video-background').coverVid(1920, 1080);
 
 	$('#work-sort').mixItUp();
+
+	//Mobile Nav
+	$('#mobile-nav-toggle').click(function() {
+	  	event.preventDefault();
+		$('body').toggleClass('open');
+		$('.navicon-button').toggleClass("open-button");
+	});
 
 	// Check for nav onload
 	stickyNavigation();

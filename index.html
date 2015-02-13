@@ -6,8 +6,8 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Site Title</title>
-<meta name="description" content="Blue coat demo">
+<title>Cultivator Labs - Home Demo</title>
+<meta name="description" content="Cultivator Labs demo">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="css/style.css">
@@ -23,16 +23,9 @@
 <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-<div class="video-background">
-    <video id="home-video-background" width="1920" autoplay loop poster="img/video-background.jpg">
-        <!--source src="videos/clouds.webm" type="video/webm"-->
-        <source src="http://107.170.196.220/wp-content/uploads/2015/01/home-page-video.mp4" type="video/mp4">
-    </video>
-    <h1>Cultivator Labs Video Production Company</h1>
-</div>
+
 <header role="banner">
   <div id="main-navbar" class="navbar">
-    <a href="#" class="navbar-toggle"><i class="fa fa-navicon"></i></a>
     <a class="logo" href="#"><img src="img/logo-white.png" alt="Cultivator Labs" /></a>
     <ul class="menu">
       <li><a href="">Work</a></li>
@@ -45,6 +38,14 @@
 </div>
 </header>
 
+<div class="wrapper">
+<div class="video-background">
+    <video id="home-video-background" width="1920" autoplay loop poster="img/video-background.jpg">
+        <!--source src="http://107.170.196.220/wp-content/uploads/2015/01/home-page-video.webm" type="video/webm"-->
+        <!--source src="http://107.170.196.220/wp-content/uploads/2015/01/home-page-video.mp4" type="video/mp4"-->
+    </video>
+    <h1>Cultivator Labs Video Production Company</h1>
+</div>
 <div class="home-intro">
   <div class="message" id="navCue">
     <h2><em>What do you</em><br>stand for?</h2>
@@ -205,6 +206,20 @@
     <span>Crafted in AZ <strong>by Kristen Zirkler</strong></span>
   </a>
 </div>
+</div><!-- .wrapper -->
+
+
+<a class="navbar-toggle" id="mobile-nav-toggle">
+  <span class="navicon-button x"><span class="navicon"></span></span>
+</a>
+<ul class="mobile-menu">
+  <li><a href="">Work</a></li>
+  <li><a href="">Services</a></li>
+  <li><a href="">About</a></li>
+  <li><a href="">Team</a></li>
+  <li><a href="">Contact</a></li>
+  <li><a href="">Blog</a></li>
+</ul>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
